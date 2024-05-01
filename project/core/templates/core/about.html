@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block titulo %}
+    About
+{% endblock titulo %}
+
+{% block contenido %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-0 shadow">
+                <div class="card-body text-center">
+                    <img src="{% static 'core/img/yo.webp' %}" class="mb-4" width="200" height="200" alt="Foto de perfil">
+                    <h2 class="card-title mb-3">Cristian M. CARRIÓ</h2>
+                    <p class="card-text" style="text-indent: 20px; text-align: justify;">
+                        "Soy un profesor de informática apasionado por la programación y ansioso por convertirla en mi carrera principal. Me encanta enfrentarme a nuevos desafíos y establecer sólidos vínculos laborales mientras adquiero nuevas experiencias y conocimientos en el camino hacia el éxito profesional."
+                    </p>
+                    <p class="card-text"></p>
+                    
+                    <div class="social-links mt-4">
+                        <a href="https://www.instagram.com/tincho900314/?next=%2F" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://github.com/Ccarrio90" class="github"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height: 100px;"></div>
+
+{% endblock contenido %}
+
+

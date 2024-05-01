@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    ¡Ofertas!
+{% endblock titulo %}
+
+
+{% block contenido %}
+<section class="py-5">
+    <div class="container px-4 px-lg-6 mt-2">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {% include 'core/components/card.html' with nombre='Recuplast - Frentes ' precio='$151.000' ruta='core/img/imagen1.webp' descripcion='"Protege tu hogar con nuestra pintura impermeable para frentes, resistente a la intemperie y de larga duración, para una belleza que perdura.'%}
+            {% include 'core/components/card.html' with nombre='Rodillos - Varios' precio='$142.000' ruta='core/img/imagen2.webp' descripcion='Obtén resultados profesionales con nuestros rodillos de alta calidad, diseñados para una aplicación suave y uniforme en cada proyecto de pintura.'%}
+            {% include 'core/components/card.html' with nombre='Pinceles' precio='$95.000' ruta='core/img/imagen3.webp' descripcion='Descubre la precisión y versatilidad en cada trazo con nuestros pinceles de calidad premium, tu herramienta indispensable para crear obras maestras.'%}
+            {% include 'core/components/card.html' with nombre='Sopletes' precio='$235.000' ruta='core/img/imagen4.webp' descripcion='Domina el arte de la pintura con nuestros sopletes de alta precisión, tu compañero confiable para aplicaciones eficientes y acabados profesionales.'%}
+            
+        </div>
+    </div>
+</section>
+{% endblock contenido %}

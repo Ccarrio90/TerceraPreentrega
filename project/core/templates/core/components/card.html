@@ -1,0 +1,47 @@
+{% load static %}
+
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Product image-->
+        <div style="max-height: 300px; overflow:hidden;">
+            <img class="card-img-top w-100" src="{% static ruta %}" alt="..." style="object-fit: cover; object-position: center;" />
+        </div>
+        <!-- Product details-->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder">{{ nombre }}</h5>
+                <!-- Product price-->
+                {{ precio }}
+            </div>
+        </div>
+        <!-- Product actions-->
+        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center">
+                <!-- Botón para abrir el modal -->
+                <button type="button" class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#myModal{{ nombre|slugify }}">
+                    Descripción
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal{{ nombre|slugify }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Descripción</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Mostrar la descripción -->
+                <p>{{ descripcion }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
